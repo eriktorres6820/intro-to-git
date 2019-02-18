@@ -17,7 +17,8 @@ var campgroundRoutes      = require("./routes/campgrounds"),
     indexRoutes           = require("./routes/index");
 
 var db                = mongoose.connection;
-mongoose.connect("mongodb://localhost:27017/yelp_camp2", { useNewUrlParser: true});
+mongoose.connect("mongodb+srv://YcampTico:D4FGi6820@cluster0-gtdzc.mongodb.net/yelp_camp2?retryWrites=true");
+//mongoose.connect("mongodb://localhost:27017/yelp_camp2", { useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public")); //console.log(__dirname);
@@ -98,7 +99,7 @@ app.listen(process.env.PORT, process.env.IP, function(){
 * to login:
     heroku login -i
     
-* heoku create
+* heroku create
     create a new heroku app
 
 * git remote -v                             
@@ -114,6 +115,14 @@ app.listen(process.env.PORT, process.env.IP, function(){
     Runs CODE
 
 *
+
+*/
+
+/*========== MongoDB Atlas ==============*/
+/*
+
+Username: YcampTico
+Password: D4FGi6820
 
 */
 
