@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+<div class="campList">
+    <h1>Campgrounds Page</h1>
+  
+    <a href="/campgrounds/">Home</a>
+    
+    <%  campgrounds.forEach(function(campground){ %>
+        <div>
+            <h4><%=campground.name %></h4>
+            <img src="<%=campground.image%>">
+            <p><%=campground.descrip.replace(/<\/?[^>]+(>|$)/g, "").substring(0, 50)%></p>
+            <p>Date created: <%=campground.date.toString()%></p>
+            <a href="/campgrounds/<%= campground._id %>">Read More</a>
+        </div>
+    <% }); %>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,34 @@
+body {
+    background: #EAEAEA;
+}
+
+.bloop {
+    margin-top: 25px;
+}
+#skrt {
+    margin-top: 5px;
+    padding: 10px;
+
+}
+
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 10px;
+}
+
+.campList {
+    padding: 10px;
+    
+}
+
+.delete-form {
+    display: inline;
+}

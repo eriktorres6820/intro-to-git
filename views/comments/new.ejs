@@ -1,0 +1,12 @@
+<% include ../partials/header %>
+
+<h1> Comments page for <%= campground.name %></h1>
+
+<form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+    <textarea name="comment[text]" rows="10" cols="50" required></textarea>
+    <button>Submit</button>
+</form>
+
+<a href="/campgrounds">Home</a>
+
+<% include ../partials/footer %>
