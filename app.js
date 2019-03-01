@@ -17,7 +17,7 @@ var campgroundRoutes      = require("./routes/campgrounds"),
     indexRoutes           = require("./routes/index");
 
 var db                = mongoose.connection;
-var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp2"
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp2";
 mongoose.connect(url, { useNewUrlParser: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -79,6 +79,10 @@ app.listen(process.env.PORT, process.env.IP, function(){
 * git checkout CommitId                     Detached head to previous commit
 * git revert --no-commit CommitId..HEAD     Revert master to previous commit
 * q                                         Exit git log
+
+* To push to github
+    git push -u origin master
+
 /* NOTE files must be added everytime before committing*/
 
 
@@ -93,7 +97,7 @@ app.listen(process.env.PORT, process.env.IP, function(){
     db.NAME.drop()   // Deletes database
 */
 
-/*===============Heroku commands =========================*/
+/*=============== Heroku commands =========================*/
 /*
 * NOTE: Must add the following to package.json: "start": "node app.js"
     See file for location
@@ -112,7 +116,7 @@ app.listen(process.env.PORT, process.env.IP, function(){
 *heroku logs
     Displays logs for specific app
     
-*heoku run CODE 
+*heroku run CODE 
     Runs CODE
 
 *
